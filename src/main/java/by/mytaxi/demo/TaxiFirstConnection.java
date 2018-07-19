@@ -19,6 +19,9 @@ public class TaxiFirstConnection {
 
     public static void main(String[] args) throws SQLException {
 
+        System.out.println("hello");
+        System.out.println();
+
         try (Connection connection = getConnection();
            CallableStatement statement = connection.prepareCall(DataBaseQeueies.CALL_SHIFTS_PROCEDURE)) {
 
