@@ -4,7 +4,6 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.*;
@@ -18,7 +17,7 @@ public class TaxiFirstConnection {
     private static final String PASSWORD = "pass";
 
     public static void main(String[] args) throws SQLException {
-        
+
         try (Connection connection = getConnection();
            CallableStatement statement = connection.prepareCall(DataBaseQeueies.CALL_SHIFTS_PROCEDURE)) {
 
